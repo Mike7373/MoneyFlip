@@ -6,12 +6,18 @@ var isLastPlayer:bool = false
 
 func _ready():
 	isPlayerTurn = (bool)(randi() % 2)
+	PlayRound()
 
 func PlayRound():
-	#qui ci va il collegamento al testo per mostrare quale round inizia + timer + sfx
+	#qui ci vanno i sfx
+	%RoundCanvas.show()
+	%RoundText.text = "Round " + String.num(currentRound)
+	await get_tree().create_timer(3.0).timeout
+	%RoundCanvas.hide()
+	
 	if isPlayerTurn:
 		#apri UI della scelta dei sacchetti
-		pass
+		%SelectionCanvas.show()
 	else:
 		#fai giocare l'AI
 		pass
