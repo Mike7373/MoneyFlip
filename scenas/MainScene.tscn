@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dftt7ps5rpfas"]
+[gd_scene load_steps=3 format=3 uid="uid://dftt7ps5rpfas"]
 
 [ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_7rba3"]
+[ext_resource type="Texture2D" uid="uid://bfkpx174yiq64" path="res://icon.svg" id="2_csrsf"]
 
 [node name="MainScene" type="Node2D"]
 
@@ -14,10 +15,208 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Background" type="Panel" parent="SelectionCanvas"]
+[node name="PurseTypeSelection" type="Panel" parent="SelectionCanvas"]
+visible = false
+self_modulate = Color(0, 0, 0, 0.235294)
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
+
+[node name="AttackImg" type="TextureRect" parent="SelectionCanvas/PurseTypeSelection"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_csrsf")
+
+[node name="AttackText" type="Label" parent="SelectionCanvas/PurseTypeSelection/AttackImg"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -50.0
+offset_bottom = -10.0
+grow_horizontal = 2
+text = "Attack"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HealImg" type="TextureRect" parent="SelectionCanvas/PurseTypeSelection"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 100.0
+offset_top = -100.0
+offset_right = 300.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_csrsf")
+
+[node name="HealText" type="Label" parent="SelectionCanvas/PurseTypeSelection/HealImg"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -50.0
+offset_bottom = -10.0
+grow_horizontal = 2
+text = "Heal"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PurseTypeSelection2" type="Panel" parent="SelectionCanvas"]
+self_modulate = Color(0, 0, 0, 0.235294)
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="HeadImg" type="TextureRect" parent="SelectionCanvas/PurseTypeSelection2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -100.0
+offset_right = -100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_csrsf")
+
+[node name="HeadText" type="Label" parent="SelectionCanvas/PurseTypeSelection2/HeadImg"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -50.0
+offset_bottom = -10.0
+grow_horizontal = 2
+text = "Head"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CrossImg" type="TextureRect" parent="SelectionCanvas/PurseTypeSelection2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 100.0
+offset_top = -100.0
+offset_right = 300.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_csrsf")
+
+[node name="CrossText" type="Label" parent="SelectionCanvas/PurseTypeSelection2/CrossImg"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -50.0
+offset_bottom = -10.0
+grow_horizontal = 2
+text = "Cross"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CoinFlipSelection" type="Panel" parent="SelectionCanvas"]
+visible = false
+self_modulate = Color(0, 0, 0, 0.235294)
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="SingleCoin" type="TextureRect" parent="SelectionCanvas/CoinFlipSelection"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -100.0
+offset_right = -200.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_csrsf")
+
+[node name="Label" type="Label" parent="SelectionCanvas/CoinFlipSelection/SingleCoin"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -50.0
+offset_bottom = -10.0
+grow_horizontal = 2
+text = "Single Coin"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SmallBag" type="TextureRect" parent="SelectionCanvas/CoinFlipSelection"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_csrsf")
+
+[node name="Label" type="Label" parent="SelectionCanvas/CoinFlipSelection/SmallBag"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -50.0
+offset_bottom = -10.0
+grow_horizontal = 2
+text = "Small Purse"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BigBag" type="TextureRect" parent="SelectionCanvas/CoinFlipSelection"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 200.0
+offset_top = -100.0
+offset_right = 400.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_csrsf")
+
+[node name="Label" type="Label" parent="SelectionCanvas/CoinFlipSelection/BigBag"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -50.0
+offset_bottom = -10.0
+grow_horizontal = 2
+text = "Big Purse
+"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="RoundCanvas" type="Control" parent="."]
 unique_name_in_owner = true
