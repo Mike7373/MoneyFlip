@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bnrq3pejnmoru"]
+
+[sub_resource type="GDScript" id="GDScript_maeyg"]
+script/source = "extends Resource
+
+@export var coin : int
+@export var amount_of_bags : int
+
+func _init(p_coin = 0, p_amount_of_bags = 0):
+	coin = p_coin
+	amount_of_bags = p_amount_of_bags
+"
+
+[resource]
+resource_local_to_scene = true
+script = SubResource("GDScript_maeyg")
+coin = 3
+amount_of_bags = 0
