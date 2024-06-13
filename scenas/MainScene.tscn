@@ -1,28 +1,33 @@
-[gd_scene load_steps=3 format=3 uid="uid://dftt7ps5rpfas"]
+[gd_scene load_steps=4 format=3 uid="uid://dftt7ps5rpfas"]
 
 [ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_7rba3"]
 [ext_resource type="Texture2D" uid="uid://bfkpx174yiq64" path="res://icon.svg" id="2_csrsf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2d8cr"]
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+outline_size = 5
 
 [node name="MainScene" type="Node2D"]
 
 [node name="GameManager" type="Node" parent="."]
 script = ExtResource("1_7rba3")
 
-[node name="SelectionCanvas" type="Control" parent="."]
+[node name="GameplayCanvas" type="Control" parent="."]
 unique_name_in_owner = true
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="PurseTypeSelection" type="Panel" parent="SelectionCanvas"]
-visible = false
+[node name="PurseTypeSelection" type="Panel" parent="GameplayCanvas"]
 self_modulate = Color(0, 0, 0, 0.235294)
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 
-[node name="AttackImg" type="TextureRect" parent="SelectionCanvas/PurseTypeSelection"]
+[node name="AttackImg" type="Button" parent="GameplayCanvas/PurseTypeSelection"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -35,9 +40,10 @@ offset_right = -100.0
 offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_csrsf")
+icon = ExtResource("2_csrsf")
+icon_alignment = 1
 
-[node name="AttackText" type="Label" parent="SelectionCanvas/PurseTypeSelection/AttackImg"]
+[node name="AttackText" type="Label" parent="GameplayCanvas/PurseTypeSelection/AttackImg"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -48,7 +54,7 @@ text = "Attack"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HealImg" type="TextureRect" parent="SelectionCanvas/PurseTypeSelection"]
+[node name="HealImg" type="Button" parent="GameplayCanvas/PurseTypeSelection"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -61,9 +67,10 @@ offset_right = 300.0
 offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_csrsf")
+icon = ExtResource("2_csrsf")
+icon_alignment = 1
 
-[node name="HealText" type="Label" parent="SelectionCanvas/PurseTypeSelection/HealImg"]
+[node name="HealText" type="Label" parent="GameplayCanvas/PurseTypeSelection/HealImg"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -74,13 +81,14 @@ text = "Heal"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PurseTypeSelection2" type="Panel" parent="SelectionCanvas"]
+[node name="PurseTypeSelection2" type="Panel" parent="GameplayCanvas"]
+visible = false
 self_modulate = Color(0, 0, 0, 0.235294)
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 
-[node name="HeadImg" type="TextureRect" parent="SelectionCanvas/PurseTypeSelection2"]
+[node name="HeadImg" type="Button" parent="GameplayCanvas/PurseTypeSelection2"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -93,9 +101,10 @@ offset_right = -100.0
 offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_csrsf")
+icon = ExtResource("2_csrsf")
+icon_alignment = 1
 
-[node name="HeadText" type="Label" parent="SelectionCanvas/PurseTypeSelection2/HeadImg"]
+[node name="HeadText" type="Label" parent="GameplayCanvas/PurseTypeSelection2/HeadImg"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -106,7 +115,7 @@ text = "Head"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CrossImg" type="TextureRect" parent="SelectionCanvas/PurseTypeSelection2"]
+[node name="CrossImg" type="Button" parent="GameplayCanvas/PurseTypeSelection2"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -119,9 +128,10 @@ offset_right = 300.0
 offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_csrsf")
+icon = ExtResource("2_csrsf")
+icon_alignment = 1
 
-[node name="CrossText" type="Label" parent="SelectionCanvas/PurseTypeSelection2/CrossImg"]
+[node name="CrossText" type="Label" parent="GameplayCanvas/PurseTypeSelection2/CrossImg"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -132,14 +142,14 @@ text = "Cross"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CoinFlipSelection" type="Panel" parent="SelectionCanvas"]
+[node name="CoinFlipSelection" type="Panel" parent="GameplayCanvas"]
 visible = false
 self_modulate = Color(0, 0, 0, 0.235294)
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 
-[node name="SingleCoin" type="TextureRect" parent="SelectionCanvas/CoinFlipSelection"]
+[node name="SingleCoin" type="Button" parent="GameplayCanvas/CoinFlipSelection"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -152,9 +162,10 @@ offset_right = -200.0
 offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_csrsf")
+icon = ExtResource("2_csrsf")
+icon_alignment = 1
 
-[node name="Label" type="Label" parent="SelectionCanvas/CoinFlipSelection/SingleCoin"]
+[node name="Label" type="Label" parent="GameplayCanvas/CoinFlipSelection/SingleCoin"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -165,7 +176,7 @@ text = "Single Coin"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SmallBag" type="TextureRect" parent="SelectionCanvas/CoinFlipSelection"]
+[node name="SmallBag" type="Button" parent="GameplayCanvas/CoinFlipSelection"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -178,9 +189,10 @@ offset_right = 100.0
 offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_csrsf")
+icon = ExtResource("2_csrsf")
+icon_alignment = 1
 
-[node name="Label" type="Label" parent="SelectionCanvas/CoinFlipSelection/SmallBag"]
+[node name="Label" type="Label" parent="GameplayCanvas/CoinFlipSelection/SmallBag"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -191,7 +203,7 @@ text = "Small Purse"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="BigBag" type="TextureRect" parent="SelectionCanvas/CoinFlipSelection"]
+[node name="BigBag" type="Button" parent="GameplayCanvas/CoinFlipSelection"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -204,9 +216,10 @@ offset_right = 400.0
 offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_csrsf")
+icon = ExtResource("2_csrsf")
+icon_alignment = 1
 
-[node name="Label" type="Label" parent="SelectionCanvas/CoinFlipSelection/BigBag"]
+[node name="Label" type="Label" parent="GameplayCanvas/CoinFlipSelection/BigBag"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -243,5 +256,140 @@ offset_right = 169.0
 offset_bottom = 56.0
 grow_horizontal = 2
 text = "ROUND 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CharacterCanvas" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Background" type="Panel" parent="CharacterCanvas"]
+self_modulate = Color(0, 0, 0, 0.235294)
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Pippo" type="Button" parent="CharacterCanvas/Background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -25.0
+offset_right = -300.0
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("2_csrsf")
+icon_alignment = 1
+
+[node name="PippoTxt" type="Label" parent="CharacterCanvas/Background/Pippo"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -50.0
+offset_bottom = -10.0
+grow_horizontal = 2
+text = "Pippo"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Pluto" type="Button" parent="CharacterCanvas/Background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -25.0
+offset_right = -50.0
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("2_csrsf")
+icon_alignment = 1
+
+[node name="PlutoTxt" type="Label" parent="CharacterCanvas/Background/Pluto"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -50.0
+offset_bottom = -10.0
+grow_horizontal = 2
+text = "Pluto"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Paperino" type="Button" parent="CharacterCanvas/Background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 50.0
+offset_top = -25.0
+offset_right = 200.0
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("2_csrsf")
+icon_alignment = 1
+
+[node name="PaperinoTxt" type="Label" parent="CharacterCanvas/Background/Paperino"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -50.0
+offset_bottom = -10.0
+grow_horizontal = 2
+text = "Paperino"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Topolino" type="Button" parent="CharacterCanvas/Background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 300.0
+offset_top = -25.0
+offset_right = 450.0
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("2_csrsf")
+icon_alignment = 1
+
+[node name="TopolinoTxt" type="Label" parent="CharacterCanvas/Background/Topolino"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -50.0
+offset_bottom = -10.0
+grow_horizontal = 2
+text = "Topolino"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TitleTxt" type="Label" parent="CharacterCanvas/Background"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250.0
+offset_top = 100.0
+offset_right = 250.0
+offset_bottom = 200.0
+grow_horizontal = 2
+text = "Select Character"
+label_settings = SubResource("LabelSettings_2d8cr")
 horizontal_alignment = 1
 vertical_alignment = 1

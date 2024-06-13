@@ -17,7 +17,7 @@ func PlayRound():
 	
 	if isPlayerTurn:
 		#apri UI della scelta dei sacchetti
-		%SelectionCanvas.show()
+		%GameplayCanvas.show()
 	else:
 		#fai giocare l'AI
 		pass
