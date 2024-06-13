@@ -1,0 +1,67 @@
+[gd_resource type="SpriteFrames" load_steps=10 format=3 uid="uid://dd3dc8geapmr"]
+
+[ext_resource type="Texture2D" uid="uid://c552idtddqllb" path="res://assets/sprites/Elementals_Crystal_Mauler_Free_v1.0/animations/spritesheet/crystal_mauler_free_288x128_SpriteSheet.png" id="1_lox0s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_slqy1"]
+atlas = ExtResource("1_lox0s")
+region = Rect2(0, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_83f7t"]
+atlas = ExtResource("1_lox0s")
+region = Rect2(288, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mnpsj"]
+atlas = ExtResource("1_lox0s")
+region = Rect2(576, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smaq6"]
+atlas = ExtResource("1_lox0s")
+region = Rect2(864, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_akj73"]
+atlas = ExtResource("1_lox0s")
+region = Rect2(1152, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lob2m"]
+atlas = ExtResource("1_lox0s")
+region = Rect2(1440, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4qvv"]
+atlas = ExtResource("1_lox0s")
+region = Rect2(1728, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i43qn"]
+atlas = ExtResource("1_lox0s")
+region = Rect2(2016, 0, 288, 128)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_slqy1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_83f7t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mnpsj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smaq6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_akj73")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lob2m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4qvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i43qn")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 8.0
+}]

@@ -1,0 +1,67 @@
+[gd_resource type="SpriteFrames" load_steps=10 format=3 uid="uid://q2ip17s4qfdj"]
+
+[ext_resource type="Texture2D" uid="uid://dbgjwddd3414j" path="res://assets/sprites/Elementals_fire_knight_FREE_v1.1/spritesheets/fire_FREE_SpriteSheet_288x128.png" id="1_c4cdo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cixg"]
+atlas = ExtResource("1_c4cdo")
+region = Rect2(0, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_btvq6"]
+atlas = ExtResource("1_c4cdo")
+region = Rect2(288, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfxdi"]
+atlas = ExtResource("1_c4cdo")
+region = Rect2(576, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eu7hd"]
+atlas = ExtResource("1_c4cdo")
+region = Rect2(864, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5hp4v"]
+atlas = ExtResource("1_c4cdo")
+region = Rect2(1152, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ucr6a"]
+atlas = ExtResource("1_c4cdo")
+region = Rect2(1440, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_41uft"]
+atlas = ExtResource("1_c4cdo")
+region = Rect2(1728, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eugvb"]
+atlas = ExtResource("1_c4cdo")
+region = Rect2(2016, 0, 288, 128)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5cixg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_btvq6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfxdi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eu7hd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5hp4v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ucr6a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_41uft")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eugvb")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 8.0
+}]

@@ -30,9 +30,8 @@ func EndRound():
 	PlayRound()
 	
 func PlayGame():
-	%CharacterCanvas.show()
 	isPlayerTurn = (bool)(randi() % 2)
-	#PlayRound()
+	%CharacterCanvas.show()
 
 func EndGame():
 	#schermata di sconfitta

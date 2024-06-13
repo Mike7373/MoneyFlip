@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8jec8gixu457"]
+
+[ext_resource type="SpriteFrames" uid="uid://cyj6row4wk8j7" path="res://assets/animations/Luke.tres" id="1_qngxh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bgbvd"]
+
+[node name="Luke" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_bgbvd")
+
+[node name="Character" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_qngxh")
+animation = &"Attack"
+autoplay = "Idle"
+frame = 13
+frame_progress = 1.0

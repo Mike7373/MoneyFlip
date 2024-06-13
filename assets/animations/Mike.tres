@@ -1,0 +1,67 @@
+[gd_resource type="SpriteFrames" load_steps=10 format=3 uid="uid://dsoweioj178r2"]
+
+[ext_resource type="Texture2D" uid="uid://de6xhhxs6hish" path="res://assets/sprites/Elementals_metal_bladekeeper_FREE_v1.1/spritesheets/metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128.png" id="1_nhg58"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_607t2"]
+atlas = ExtResource("1_nhg58")
+region = Rect2(0, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_psdtf"]
+atlas = ExtResource("1_nhg58")
+region = Rect2(288, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2rgln"]
+atlas = ExtResource("1_nhg58")
+region = Rect2(576, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0vvx4"]
+atlas = ExtResource("1_nhg58")
+region = Rect2(864, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rdeb"]
+atlas = ExtResource("1_nhg58")
+region = Rect2(1152, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_efsfl"]
+atlas = ExtResource("1_nhg58")
+region = Rect2(1440, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ife1t"]
+atlas = ExtResource("1_nhg58")
+region = Rect2(1728, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75crk"]
+atlas = ExtResource("1_nhg58")
+region = Rect2(2016, 0, 288, 128)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_607t2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_psdtf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2rgln")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0vvx4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6rdeb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_efsfl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ife1t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75crk")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 8.0
+}]
