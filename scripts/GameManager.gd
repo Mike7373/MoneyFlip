@@ -5,8 +5,7 @@ var isPlayerTurn:bool
 var isLastPlayer:bool = false
 
 func _ready():
-	isPlayerTurn = (bool)(randi() % 2)
-	PlayRound()
+	PlayGame()
 
 func PlayRound():
 	#qui ci vanno i sfx
@@ -31,8 +30,9 @@ func EndRound():
 	PlayRound()
 	
 func PlayGame():
-	#select character
-	PlayRound()
+	%CharacterCanvas.show()
+	isPlayerTurn = (bool)(randi() % 2)
+	#PlayRound()
 
 func EndGame():
 	#schermata di sconfitta

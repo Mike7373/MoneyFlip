@@ -1,0 +1,120 @@
+[gd_scene load_steps=7 format=3 uid="uid://3yfrdhnfvo7y"]
+
+[ext_resource type="Script" path="res://scripts/MainMenu.gd" id="1_o3131"]
+[ext_resource type="Texture2D" uid="uid://dweuxa8haeudo" path="res://assets/backgrounds/main_menu.png" id="1_sf8e0"]
+[ext_resource type="FontFile" uid="uid://oohk85j86o1w" path="res://assets/fonts/mago1.ttf" id="2_5m5jk"]
+[ext_resource type="FontFile" uid="uid://5pppyphfcdit" path="res://assets/fonts/mago3.ttf" id="2_56cr1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tfb2a"]
+font = ExtResource("2_56cr1")
+font_size = 200
+font_color = Color(1, 0, 0, 1)
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 20
+shadow_color = Color(0, 0, 0, 0.368627)
+
+[sub_resource type="LabelSettings" id="LabelSettings_irqyp"]
+font = ExtResource("2_5m5jk")
+font_size = 100
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o3131")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_sf8e0")
+expand_mode = 1
+flip_h = true
+
+[node name="Opacity" type="Panel" parent="Background"]
+modulate = Color(100, 100, 100, 0.411)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Background"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -421.0
+offset_top = 150.0
+offset_right = 421.0
+offset_bottom = 309.0
+grow_horizontal = 2
+text = "Coin Battle"
+label_settings = SubResource("LabelSettings_tfb2a")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayButton" type="Button" parent="Background"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -75.0
+offset_right = 300.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Background/PlayButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Play"
+label_settings = SubResource("LabelSettings_irqyp")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExitButton" type="Button" parent="Background"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = 160.0
+offset_right = 300.0
+offset_bottom = 310.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Background/ExitButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Exit"
+label_settings = SubResource("LabelSettings_irqyp")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="button_down" from="Background/PlayButton" to="." method="_on_play_button_button_down"]
+[connection signal="button_down" from="Background/ExitButton" to="." method="_on_exit_button_button_down"]
