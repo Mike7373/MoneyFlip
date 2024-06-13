@@ -1,10 +1,306 @@
-[gd_scene load_steps=4 format=3 uid="uid://dftt7ps5rpfas"]
+[gd_scene load_steps=52 format=3 uid="uid://dftt7ps5rpfas"]
 
 [ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_6g6iv"]
 [ext_resource type="Texture2D" uid="uid://bfkpx174yiq64" path="res://icon.svg" id="2_jucwv"]
+[ext_resource type="Texture2D" uid="uid://dweuxa8haeudo" path="res://assets/backgrounds/main_menu.png" id="3_dpgvq"]
+[ext_resource type="FontFile" uid="uid://5pppyphfcdit" path="res://assets/fonts/mago3.ttf" id="4_0d2dl"]
+[ext_resource type="FontFile" uid="uid://oohk85j86o1w" path="res://assets/fonts/mago1.ttf" id="4_grsdn"]
+[ext_resource type="Texture2D" uid="uid://r0no1je0taet" path="res://assets/sprites/Elementals_Leaf_ranger_Free_v1.0/animations/spritesheets/Elementals_leaf_ranger_288x128_SpriteSheet.png" id="5_4skdo"]
+[ext_resource type="Texture2D" uid="uid://dbgjwddd3414j" path="res://assets/sprites/Elementals_fire_knight_FREE_v1.1/spritesheets/fire_FREE_SpriteSheet_288x128.png" id="6_fsj15"]
+[ext_resource type="Texture2D" uid="uid://c552idtddqllb" path="res://assets/sprites/Elementals_Crystal_Mauler_Free_v1.0/animations/spritesheet/crystal_mauler_free_288x128_SpriteSheet.png" id="7_5j2b6"]
+[ext_resource type="Texture2D" uid="uid://de6xhhxs6hish" path="res://assets/sprites/Elementals_metal_bladekeeper_FREE_v1.1/spritesheets/metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128.png" id="8_hrfov"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jr5ir"]
+font = ExtResource("4_grsdn")
+font_size = 70
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ic220"]
+atlas = ExtResource("5_4skdo")
+region = Rect2(0, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_15dwr"]
+atlas = ExtResource("5_4skdo")
+region = Rect2(288, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ip7j6"]
+atlas = ExtResource("5_4skdo")
+region = Rect2(576, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3buf"]
+atlas = ExtResource("5_4skdo")
+region = Rect2(864, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e8wb5"]
+atlas = ExtResource("5_4skdo")
+region = Rect2(1152, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wibiq"]
+atlas = ExtResource("5_4skdo")
+region = Rect2(1440, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rp5a"]
+atlas = ExtResource("5_4skdo")
+region = Rect2(1728, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8vabs"]
+atlas = ExtResource("5_4skdo")
+region = Rect2(2016, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urjoe"]
+atlas = ExtResource("5_4skdo")
+region = Rect2(2304, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g6od1"]
+atlas = ExtResource("5_4skdo")
+region = Rect2(2592, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4e6qr"]
+atlas = ExtResource("5_4skdo")
+region = Rect2(2880, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qpcku"]
+atlas = ExtResource("5_4skdo")
+region = Rect2(3168, 0, 288, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ferje"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ic220")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_15dwr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ip7j6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s3buf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e8wb5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wibiq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6rp5a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8vabs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_urjoe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g6od1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4e6qr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qpcku")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 12.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cixg"]
+atlas = ExtResource("6_fsj15")
+region = Rect2(0, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_btvq6"]
+atlas = ExtResource("6_fsj15")
+region = Rect2(288, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfxdi"]
+atlas = ExtResource("6_fsj15")
+region = Rect2(576, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eu7hd"]
+atlas = ExtResource("6_fsj15")
+region = Rect2(864, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5hp4v"]
+atlas = ExtResource("6_fsj15")
+region = Rect2(1152, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ucr6a"]
+atlas = ExtResource("6_fsj15")
+region = Rect2(1440, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_41uft"]
+atlas = ExtResource("6_fsj15")
+region = Rect2(1728, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eugvb"]
+atlas = ExtResource("6_fsj15")
+region = Rect2(2016, 0, 288, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s2no8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5cixg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_btvq6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfxdi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eu7hd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5hp4v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ucr6a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_41uft")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eugvb")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 8.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_slqy1"]
+atlas = ExtResource("7_5j2b6")
+region = Rect2(0, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_83f7t"]
+atlas = ExtResource("7_5j2b6")
+region = Rect2(288, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mnpsj"]
+atlas = ExtResource("7_5j2b6")
+region = Rect2(576, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smaq6"]
+atlas = ExtResource("7_5j2b6")
+region = Rect2(864, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_akj73"]
+atlas = ExtResource("7_5j2b6")
+region = Rect2(1152, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lob2m"]
+atlas = ExtResource("7_5j2b6")
+region = Rect2(1440, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4qvv"]
+atlas = ExtResource("7_5j2b6")
+region = Rect2(1728, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i43qn"]
+atlas = ExtResource("7_5j2b6")
+region = Rect2(2016, 0, 288, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xx76t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_slqy1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_83f7t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mnpsj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smaq6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_akj73")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lob2m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4qvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i43qn")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 8.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_607t2"]
+atlas = ExtResource("8_hrfov")
+region = Rect2(0, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_psdtf"]
+atlas = ExtResource("8_hrfov")
+region = Rect2(288, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2rgln"]
+atlas = ExtResource("8_hrfov")
+region = Rect2(576, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0vvx4"]
+atlas = ExtResource("8_hrfov")
+region = Rect2(864, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rdeb"]
+atlas = ExtResource("8_hrfov")
+region = Rect2(1152, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_efsfl"]
+atlas = ExtResource("8_hrfov")
+region = Rect2(1440, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ife1t"]
+atlas = ExtResource("8_hrfov")
+region = Rect2(1728, 0, 288, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75crk"]
+atlas = ExtResource("8_hrfov")
+region = Rect2(2016, 0, 288, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3w6mn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_607t2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_psdtf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2rgln")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0vvx4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6rdeb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_efsfl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ife1t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75crk")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 8.0
+}]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2d8cr"]
-font_size = 50
+font = ExtResource("4_0d2dl")
+font_size = 200
 font_color = Color(0, 0, 0, 1)
 outline_size = 5
 
@@ -266,119 +562,162 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Background" type="Panel" parent="CharacterCanvas"]
-self_modulate = Color(0, 0, 0, 0.235294)
+[node name="Background" type="TextureRect" parent="CharacterCanvas"]
 layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("3_dpgvq")
+expand_mode = 1
+flip_h = true
 
-[node name="Pippo" type="Button" parent="CharacterCanvas/Background"]
+[node name="Opacity" type="Panel" parent="CharacterCanvas/Background"]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="Luke" type="Button" parent="CharacterCanvas/Background"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -450.0
-offset_top = -25.0
-offset_right = -300.0
-offset_bottom = 125.0
+offset_left = -825.0
+offset_top = -40.0
+offset_right = -525.0
+offset_bottom = 260.0
 grow_horizontal = 2
 grow_vertical = 2
-icon = ExtResource("2_jucwv")
 icon_alignment = 1
+expand_icon = true
 
-[node name="PippoTxt" type="Label" parent="CharacterCanvas/Background/Pippo"]
+[node name="LukeTxt" type="Label" parent="CharacterCanvas/Background/Luke"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_top = -50.0
-offset_bottom = -10.0
+offset_top = -100.0
+offset_bottom = -20.0
 grow_horizontal = 2
-text = "Pippo"
+text = "Luke
+"
+label_settings = SubResource("LabelSettings_jr5ir")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Pluto" type="Button" parent="CharacterCanvas/Background"]
+[node name="LukeAnim" type="AnimatedSprite2D" parent="CharacterCanvas/Background/Luke"]
+position = Vector2(148, 26)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_ferje")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.112487
+
+[node name="Daniel" type="Button" parent="CharacterCanvas/Background"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -200.0
-offset_top = -25.0
-offset_right = -50.0
-offset_bottom = 125.0
+offset_left = -375.0
+offset_top = -40.0
+offset_right = -75.0
+offset_bottom = 260.0
 grow_horizontal = 2
 grow_vertical = 2
-icon = ExtResource("2_jucwv")
 icon_alignment = 1
+expand_icon = true
 
-[node name="PlutoTxt" type="Label" parent="CharacterCanvas/Background/Pluto"]
+[node name="DanielTxt" type="Label" parent="CharacterCanvas/Background/Daniel"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_top = -50.0
-offset_bottom = -10.0
+offset_top = -100.0
+offset_bottom = -20.0
 grow_horizontal = 2
-text = "Pluto"
+text = "Daniel"
+label_settings = SubResource("LabelSettings_jr5ir")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Paperino" type="Button" parent="CharacterCanvas/Background"]
+[node name="DanielAnim" type="AnimatedSprite2D" parent="CharacterCanvas/Background/Daniel"]
+position = Vector2(148, 26)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_s2no8")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="Mauro" type="Button" parent="CharacterCanvas/Background"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 50.0
-offset_top = -25.0
-offset_right = 200.0
-offset_bottom = 125.0
+offset_left = 75.0
+offset_top = -40.0
+offset_right = 375.0
+offset_bottom = 260.0
 grow_horizontal = 2
 grow_vertical = 2
-icon = ExtResource("2_jucwv")
 icon_alignment = 1
+expand_icon = true
 
-[node name="PaperinoTxt" type="Label" parent="CharacterCanvas/Background/Paperino"]
+[node name="MauroTxt" type="Label" parent="CharacterCanvas/Background/Mauro"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_top = -50.0
-offset_bottom = -10.0
+offset_top = -100.0
+offset_bottom = -20.0
 grow_horizontal = 2
-text = "Paperino"
+text = "Maury
+"
+label_settings = SubResource("LabelSettings_jr5ir")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Topolino" type="Button" parent="CharacterCanvas/Background"]
+[node name="MauroAnim" type="AnimatedSprite2D" parent="CharacterCanvas/Background/Mauro"]
+position = Vector2(148, 26)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_xx76t")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="Mike" type="Button" parent="CharacterCanvas/Background"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 300.0
-offset_top = -25.0
-offset_right = 450.0
-offset_bottom = 125.0
+offset_left = 525.0
+offset_top = -40.0
+offset_right = 825.0
+offset_bottom = 260.0
 grow_horizontal = 2
 grow_vertical = 2
-icon = ExtResource("2_jucwv")
 icon_alignment = 1
+expand_icon = true
 
-[node name="TopolinoTxt" type="Label" parent="CharacterCanvas/Background/Topolino"]
+[node name="MikeTxt" type="Label" parent="CharacterCanvas/Background/Mike"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_top = -50.0
-offset_bottom = -10.0
+offset_top = -100.0
+offset_bottom = -20.0
 grow_horizontal = 2
-text = "Topolino"
+text = "Mike
+"
+label_settings = SubResource("LabelSettings_jr5ir")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="MikeAnim" type="AnimatedSprite2D" parent="CharacterCanvas/Background/Mike"]
+position = Vector2(148, 26)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_3w6mn")
+animation = &"Idle"
+autoplay = "Idle"
 
 [node name="TitleTxt" type="Label" parent="CharacterCanvas/Background"]
 layout_mode = 1
