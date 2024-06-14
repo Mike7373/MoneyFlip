@@ -4,7 +4,7 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bgbvd"]
 
-[node name="Luke" type="CharacterBody2D"]
+[node name="Mike" type="CharacterBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_bgbvd")
@@ -13,4 +13,4 @@ shape = SubResource("RectangleShape2D_bgbvd")
 sprite_frames = ExtResource("1_u4dhe")
 animation = &"Idle"
 autoplay = "Idle"
-frame_progress = 0.680817
+frame_progress = 0.85088

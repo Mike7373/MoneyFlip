@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dftt7ps5rpfas"]
+[gd_scene load_steps=19 format=3 uid="uid://dftt7ps5rpfas"]
 
 [ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_6g6iv"]
 [ext_resource type="Texture2D" uid="uid://cbhs26502utob" path="res://assets/backgrounds/Game/game_background.jpg" id="2_7omyq"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b8jec8gixu457" path="res://scenas/Luke.tscn" id="3_l4f4s"]
 [ext_resource type="Script" path="res://scripts/CharacterSelection.gd" id="3_ycry3"]
 [ext_resource type="FontFile" uid="uid://5pppyphfcdit" path="res://assets/fonts/mago3.ttf" id="4_0d2dl"]
+[ext_resource type="PackedScene" uid="uid://bs2x04tgpxvmu" path="res://scenas/Daniel.tscn" id="4_877nv"]
 [ext_resource type="FontFile" uid="uid://oohk85j86o1w" path="res://assets/fonts/mago1.ttf" id="4_grsdn"]
 [ext_resource type="Texture2D" uid="uid://dweuxa8haeudo" path="res://assets/backgrounds/UI/main_menu.png" id="7_x5ycg"]
 [ext_resource type="SpriteFrames" uid="uid://cyj6row4wk8j7" path="res://assets/animations/Luke.tres" id="8_onyil"]
@@ -57,9 +58,18 @@ grow_vertical = 2
 texture = ExtResource("2_7omyq")
 expand_mode = 3
 
-[node name="Luke" parent="Background" instance=ExtResource("3_l4f4s")]
+[node name="LeftSpawener" type="Node2D" parent="Background"]
 position = Vector2(565, 675)
+
+[node name="Luke" parent="Background/LeftSpawener" instance=ExtResource("3_l4f4s")]
 scale = Vector2(5, 5)
+
+[node name="RightSpawner" type="Node2D" parent="Background"]
+position = Vector2(1350, 675)
+
+[node name="Daniel" parent="Background/RightSpawner" instance=ExtResource("4_877nv")]
+scale = Vector2(5, 5)
+floor_snap_length = 0.0
 
 [node name="UI" type="Node" parent="."]
 
