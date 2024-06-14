@@ -8,7 +8,7 @@ func _ready():
 	PlayGame()
 
 func PlayRound():
-	#qui ci vanno i sfx
+	%RoundSound.play()
 	%RoundCanvas.show()
 	%RoundText.text = "Round " + String.num(currentRound)
 	await get_tree().create_timer(3.0).timeout
@@ -17,9 +17,11 @@ func PlayRound():
 	if isPlayerTurn:
 		#apri UI della scelta dei sacchetti
 		%GameplayCanvas.show()
+		isPlayerTurn = false;
 	else:
 		#fai giocare l'AI
-		pass
+		isPlayerTurn = true
+		EndRound()
 
 func EndRound():
 	if isLastPlayer:
