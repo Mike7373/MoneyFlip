@@ -1,12 +1,10 @@
-[gd_scene load_steps=23 format=3 uid="uid://dftt7ps5rpfas"]
+[gd_scene load_steps=21 format=3 uid="uid://dftt7ps5rpfas"]
 
 [ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_6g6iv"]
 [ext_resource type="Texture2D" uid="uid://cbhs26502utob" path="res://assets/backgrounds/Game/game_background.jpg" id="2_7omyq"]
 [ext_resource type="Texture2D" uid="uid://bfkpx174yiq64" path="res://icon.svg" id="2_jucwv"]
-[ext_resource type="PackedScene" uid="uid://b8jec8gixu457" path="res://scenas/Luke.tscn" id="3_l4f4s"]
 [ext_resource type="Script" path="res://scripts/CharacterSelection.gd" id="3_ycry3"]
 [ext_resource type="FontFile" uid="uid://5pppyphfcdit" path="res://assets/fonts/mago3.ttf" id="4_0d2dl"]
-[ext_resource type="PackedScene" uid="uid://bs2x04tgpxvmu" path="res://scenas/Daniel.tscn" id="4_877nv"]
 [ext_resource type="FontFile" uid="uid://oohk85j86o1w" path="res://assets/fonts/mago1.ttf" id="4_grsdn"]
 [ext_resource type="Texture2D" uid="uid://dweuxa8haeudo" path="res://assets/backgrounds/UI/main_menu.png" id="7_x5ycg"]
 [ext_resource type="SpriteFrames" uid="uid://cyj6row4wk8j7" path="res://assets/animations/Luke.tres" id="8_onyil"]
@@ -75,18 +73,15 @@ grow_vertical = 2
 texture = ExtResource("2_7omyq")
 expand_mode = 3
 
-[node name="LeftSpawener" type="Node2D" parent="Background"]
+[node name="LeftSpawner" type="Node2D" parent="Background"]
+unique_name_in_owner = true
 position = Vector2(500, 550)
 scale = Vector2(7, 7)
 
-[node name="Luke" parent="Background/LeftSpawener" instance=ExtResource("3_l4f4s")]
-
 [node name="RightSpawner" type="Node2D" parent="Background"]
+unique_name_in_owner = true
 position = Vector2(1420, 550)
 scale = Vector2(7, 7)
-
-[node name="Daniel" parent="Background/RightSpawner" instance=ExtResource("4_877nv")]
-floor_snap_length = 0.0
 
 [node name="UI" type="Node" parent="."]
 
@@ -342,9 +337,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -175.0
-offset_right = 169.0
-offset_bottom = 56.0
+offset_left = -300.0
+offset_top = 200.0
+offset_right = 300.0
+offset_bottom = 360.0
 grow_horizontal = 2
 text = "ROUND 0"
 label_settings = SubResource("LabelSettings_6n6ph")
@@ -353,7 +349,6 @@ vertical_alignment = 1
 
 [node name="CharacterCanvas" type="Control" parent="UI"]
 unique_name_in_owner = true
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -361,7 +356,6 @@ offset_bottom = 40.0
 script = ExtResource("3_ycry3")
 
 [node name="Background" type="TextureRect" parent="UI/CharacterCanvas"]
-visible = false
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
@@ -535,12 +529,14 @@ vertical_alignment = 1
 
 [node name="StatsCanvas" type="Control" parent="UI"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 
 [node name="LeftCharacter" type="Node2D" parent="UI/StatsCanvas"]
+unique_name_in_owner = true
 position = Vector2(500, 150)
 scale = Vector2(1.2, 1.2)
 
@@ -586,6 +582,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="RightCharacter" type="Node2D" parent="UI/StatsCanvas"]
+unique_name_in_owner = true
 position = Vector2(1420, 150)
 scale = Vector2(1.2, 1.2)
 
