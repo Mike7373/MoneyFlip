@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ch87e8x8bytdt"]
+
+[ext_resource type="SpriteFrames" uid="uid://dsoweioj178r2" path="res://assets/animations/Mike.tres" id="1_u4dhe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bgbvd"]
+
+[node name="Mike" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_bgbvd")
+
+[node name="Character" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_u4dhe")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.486171

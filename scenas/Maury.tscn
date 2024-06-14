@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6j0gvu7y021t"]
+
+[ext_resource type="SpriteFrames" uid="uid://dd3dc8geapmr" path="res://assets/animations/Maury.tres" id="1_gwcrd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bgbvd"]
+
+[node name="Maury" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_bgbvd")
+
+[node name="Character" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_gwcrd")
+animation = &"Idle"
+autoplay = "Idle"

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bs2x04tgpxvmu"]
+
+[ext_resource type="SpriteFrames" uid="uid://q2ip17s4qfdj" path="res://assets/animations/Daniel.tres" id="1_o5m3v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bgbvd"]
+
+[node name="Daniel" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_bgbvd")
+
+[node name="Character" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_o5m3v")
+animation = &"Idle"
+autoplay = "Idle"
