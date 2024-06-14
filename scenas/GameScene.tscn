@@ -15,14 +15,6 @@
 [ext_resource type="AudioStream" uid="uid://b6ub6hlbrga7v" path="res://assets/sfx/Three Red Hearts - Box Jump.ogg" id="14_nnyqc"]
 [ext_resource type="Texture2D" uid="uid://v0t4114qf1wh" path="res://assets/ui/HP_Bar/green.png" id="15_713f7"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_s4vmo"]
-font = ExtResource("4_grsdn")
-font_size = 70
-
-[sub_resource type="LabelSettings" id="LabelSettings_wf4k0"]
-font = ExtResource("4_grsdn")
-font_size = 70
-
 [sub_resource type="LabelSettings" id="LabelSettings_6n6ph"]
 font = ExtResource("4_0d2dl")
 font_size = 200
@@ -54,6 +46,14 @@ outline_size = 3
 outline_color = Color(0, 0, 0, 1)
 shadow_color = Color(1, 1, 1, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_s4vmo"]
+font = ExtResource("4_grsdn")
+font_size = 70
+
+[sub_resource type="LabelSettings" id="LabelSettings_wf4k0"]
+font = ExtResource("4_grsdn")
+font_size = 70
+
 [node name="GameScene" type="Node2D"]
 
 [node name="GameManager" type="Node2D" parent="."]
@@ -84,239 +84,7 @@ unique_name_in_owner = true
 position = Vector2(1420, 550)
 scale = Vector2(7, 7)
 
-[node name="UI" type="Node" parent="."]
-
-[node name="GameplayCanvas" type="Control" parent="UI"]
-unique_name_in_owner = true
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="PurseTypeSelection" type="Panel" parent="UI/GameplayCanvas"]
-self_modulate = Color(0, 0, 0, 0.235294)
-layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
-
-[node name="AttackImg" type="Button" parent="UI/GameplayCanvas/PurseTypeSelection"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -450.0
-offset_top = -40.0
-offset_right = -150.0
-offset_bottom = 260.0
-grow_horizontal = 2
-grow_vertical = 2
-icon = ExtResource("2_jucwv")
-icon_alignment = 1
-expand_icon = true
-
-[node name="AttackText" type="Label" parent="UI/GameplayCanvas/PurseTypeSelection/AttackImg"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_top = -70.0
-offset_bottom = -14.0
-grow_horizontal = 2
-text = "Attack"
-label_settings = SubResource("LabelSettings_s4vmo")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="HealImg" type="Button" parent="UI/GameplayCanvas/PurseTypeSelection"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 150.0
-offset_top = -40.0
-offset_right = 450.0
-offset_bottom = 260.0
-grow_horizontal = 2
-grow_vertical = 2
-icon = ExtResource("2_jucwv")
-icon_alignment = 1
-expand_icon = true
-
-[node name="HealText" type="Label" parent="UI/GameplayCanvas/PurseTypeSelection/HealImg"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_top = -70.0
-offset_bottom = -14.0
-grow_horizontal = 2
-text = "Heal"
-label_settings = SubResource("LabelSettings_s4vmo")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="PurseTypeSelection2" type="Panel" parent="UI/GameplayCanvas"]
-visible = false
-self_modulate = Color(0, 0, 0, 0.235294)
-layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
-
-[node name="HeadImg" type="Button" parent="UI/GameplayCanvas/PurseTypeSelection2"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -450.0
-offset_top = -40.0
-offset_right = -150.0
-offset_bottom = 260.0
-grow_horizontal = 2
-grow_vertical = 2
-icon = ExtResource("2_jucwv")
-icon_alignment = 1
-expand_icon = true
-
-[node name="HeadText" type="Label" parent="UI/GameplayCanvas/PurseTypeSelection2/HeadImg"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_top = -70.0
-offset_bottom = -14.0
-grow_horizontal = 2
-text = "Head"
-label_settings = SubResource("LabelSettings_s4vmo")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CrossImg" type="Button" parent="UI/GameplayCanvas/PurseTypeSelection2"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 150.0
-offset_top = -40.0
-offset_right = 450.0
-offset_bottom = 260.0
-grow_horizontal = 2
-grow_vertical = 2
-icon = ExtResource("2_jucwv")
-icon_alignment = 1
-expand_icon = true
-
-[node name="CrossText" type="Label" parent="UI/GameplayCanvas/PurseTypeSelection2/CrossImg"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_top = -70.0
-offset_bottom = -14.0
-grow_horizontal = 2
-text = "Cross"
-label_settings = SubResource("LabelSettings_s4vmo")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CoinFlipSelection" type="Panel" parent="UI/GameplayCanvas"]
-visible = false
-self_modulate = Color(0, 0, 0, 0.235294)
-layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
-
-[node name="SingleCoin" type="Button" parent="UI/GameplayCanvas/CoinFlipSelection"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -600.0
-offset_top = -40.0
-offset_right = -300.0
-offset_bottom = 260.0
-grow_horizontal = 2
-grow_vertical = 2
-icon = ExtResource("2_jucwv")
-icon_alignment = 1
-expand_icon = true
-
-[node name="Label" type="Label" parent="UI/GameplayCanvas/CoinFlipSelection/SingleCoin"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_top = -70.0
-offset_bottom = -14.0
-grow_horizontal = 2
-text = "Single Coin"
-label_settings = SubResource("LabelSettings_wf4k0")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="SmallBag" type="Button" parent="UI/GameplayCanvas/CoinFlipSelection"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -100.0
-offset_top = -40.0
-offset_right = 200.0
-offset_bottom = 260.0
-grow_horizontal = 2
-grow_vertical = 2
-icon = ExtResource("2_jucwv")
-icon_alignment = 1
-expand_icon = true
-
-[node name="Label" type="Label" parent="UI/GameplayCanvas/CoinFlipSelection/SmallBag"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_top = -70.0
-offset_bottom = -14.0
-grow_horizontal = 2
-text = "Small Purse"
-label_settings = SubResource("LabelSettings_wf4k0")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="BigBag" type="Button" parent="UI/GameplayCanvas/CoinFlipSelection"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 400.0
-offset_top = -40.0
-offset_right = 700.0
-offset_bottom = 260.0
-grow_horizontal = 2
-grow_vertical = 2
-icon = ExtResource("2_jucwv")
-icon_alignment = 1
-expand_icon = true
-
-[node name="Label" type="Label" parent="UI/GameplayCanvas/CoinFlipSelection/BigBag"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_top = -70.0
-offset_bottom = -14.0
-grow_horizontal = 2
-text = "Big Purse
-"
-label_settings = SubResource("LabelSettings_wf4k0")
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="UI" type="Node2D" parent="."]
 
 [node name="RoundCanvas" type="Control" parent="UI"]
 unique_name_in_owner = true
@@ -350,6 +118,7 @@ vertical_alignment = 1
 
 [node name="CharacterCanvas" type="Control" parent="UI"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -625,6 +394,249 @@ offset_bottom = 20.0
 grow_horizontal = 2
 text = "Name"
 label_settings = SubResource("LabelSettings_88epi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameplayCanvas" type="Node2D" parent="UI"]
+unique_name_in_owner = true
+visible = false
+
+[node name="PurseTypeSelection" type="Control" parent="UI/GameplayCanvas"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Background" type="Panel" parent="UI/GameplayCanvas/PurseTypeSelection"]
+self_modulate = Color(1, 1, 1, 0.486275)
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="AttackImg" type="Button" parent="UI/GameplayCanvas/PurseTypeSelection"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 490.0
+offset_top = 480.0
+offset_right = 790.0
+offset_bottom = 780.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("2_jucwv")
+icon_alignment = 1
+expand_icon = true
+
+[node name="AttackText" type="Label" parent="UI/GameplayCanvas/PurseTypeSelection/AttackImg"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -70.0
+offset_bottom = -14.0
+grow_horizontal = 2
+text = "Attack"
+label_settings = SubResource("LabelSettings_s4vmo")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HealImg" type="Button" parent="UI/GameplayCanvas/PurseTypeSelection"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1090.0
+offset_top = 480.0
+offset_right = 1390.0
+offset_bottom = 780.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("2_jucwv")
+icon_alignment = 1
+expand_icon = true
+
+[node name="HealText" type="Label" parent="UI/GameplayCanvas/PurseTypeSelection/HealImg"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -70.0
+offset_bottom = -14.0
+grow_horizontal = 2
+text = "Heal"
+label_settings = SubResource("LabelSettings_s4vmo")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CoinAmountSelection" type="Control" parent="UI/GameplayCanvas"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Background" type="Panel" parent="UI/GameplayCanvas/CoinAmountSelection"]
+visible = false
+self_modulate = Color(0, 0, 0, 0.235294)
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="SingleCoin" type="Button" parent="UI/GameplayCanvas/CoinAmountSelection"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 340.0
+offset_top = 480.0
+offset_right = 640.0
+offset_bottom = 780.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("2_jucwv")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="UI/GameplayCanvas/CoinAmountSelection/SingleCoin"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -70.0
+offset_bottom = -14.0
+grow_horizontal = 2
+text = "Single Coin"
+label_settings = SubResource("LabelSettings_wf4k0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SmallBag" type="Button" parent="UI/GameplayCanvas/CoinAmountSelection"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 840.0
+offset_top = 480.0
+offset_right = 1140.0
+offset_bottom = 780.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("2_jucwv")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="UI/GameplayCanvas/CoinAmountSelection/SmallBag"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -70.0
+offset_bottom = -14.0
+grow_horizontal = 2
+text = "Small Purse"
+label_settings = SubResource("LabelSettings_wf4k0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BigBag" type="Button" parent="UI/GameplayCanvas/CoinAmountSelection"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1340.0
+offset_top = 480.0
+offset_right = 1640.0
+offset_bottom = 780.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("2_jucwv")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="UI/GameplayCanvas/CoinAmountSelection/BigBag"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -70.0
+offset_bottom = -14.0
+grow_horizontal = 2
+text = "Big Purse
+"
+label_settings = SubResource("LabelSettings_wf4k0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HeadCross" type="Control" parent="UI/GameplayCanvas"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Background" type="Panel" parent="UI/GameplayCanvas/HeadCross"]
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="HeadImg" type="Button" parent="UI/GameplayCanvas/HeadCross"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 490.0
+offset_top = 480.0
+offset_right = 790.0
+offset_bottom = 780.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("2_jucwv")
+icon_alignment = 1
+expand_icon = true
+
+[node name="HeadText" type="Label" parent="UI/GameplayCanvas/HeadCross/HeadImg"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -70.0
+offset_bottom = -14.0
+grow_horizontal = 2
+text = "Head"
+label_settings = SubResource("LabelSettings_s4vmo")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CrossImg" type="Button" parent="UI/GameplayCanvas/HeadCross"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1090.0
+offset_top = 480.0
+offset_right = 1390.0
+offset_bottom = 780.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("2_jucwv")
+icon_alignment = 1
+expand_icon = true
+
+[node name="CrossText" type="Label" parent="UI/GameplayCanvas/HeadCross/CrossImg"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -70.0
+offset_bottom = -14.0
+grow_horizontal = 2
+text = "Cross"
+label_settings = SubResource("LabelSettings_s4vmo")
 horizontal_alignment = 1
 vertical_alignment = 1
 
