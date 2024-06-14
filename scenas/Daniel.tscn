@@ -11,7 +11,5 @@ shape = SubResource("RectangleShape2D_bgbvd")
 
 [node name="Character" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("1_o5m3v")
-animation = &"Hurt"
+animation = &"Idle"
 autoplay = "Idle"
-frame = 5
-frame_progress = 1.0

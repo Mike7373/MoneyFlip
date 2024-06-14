@@ -11,7 +11,5 @@ shape = SubResource("RectangleShape2D_bgbvd")
 
 [node name="Character" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("1_qngxh")
-animation = &"Heal"
+animation = &"Idle"
 autoplay = "Idle"
-frame = 18
-frame_progress = 1.0

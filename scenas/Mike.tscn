@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ch87e8x8bytdt"]
 
-[ext_resource type="SpriteFrames" uid="uid://cyj6row4wk8j7" path="res://assets/animations/Luke.tres" id="1_30omr"]
+[ext_resource type="SpriteFrames" uid="uid://dsoweioj178r2" path="res://assets/animations/Mike.tres" id="1_u4dhe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bgbvd"]
 
@@ -10,8 +10,7 @@
 shape = SubResource("RectangleShape2D_bgbvd")
 
 [node name="Character" type="AnimatedSprite2D" parent="."]
-sprite_frames = ExtResource("1_30omr")
-animation = &"Attack"
+sprite_frames = ExtResource("1_u4dhe")
+animation = &"Idle"
 autoplay = "Idle"
-frame = 13
-frame_progress = 1.0
+frame_progress = 0.680817

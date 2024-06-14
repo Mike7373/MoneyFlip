@@ -1,17 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://b6j0gvu7y021t"]
 
-[ext_resource type="SpriteFrames" uid="uid://cyj6row4wk8j7" path="res://assets/animations/Luke.tres" id="1_p11uq"]
+[ext_resource type="SpriteFrames" uid="uid://dd3dc8geapmr" path="res://assets/animations/Maury.tres" id="1_gwcrd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bgbvd"]
 
-[node name="Luke" type="CharacterBody2D"]
+[node name="Maury" type="CharacterBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_bgbvd")
 
 [node name="Character" type="AnimatedSprite2D" parent="."]
-sprite_frames = ExtResource("1_p11uq")
-animation = &"Attack"
+sprite_frames = ExtResource("1_gwcrd")
+animation = &"Idle"
 autoplay = "Idle"
-frame = 13
-frame_progress = 1.0
