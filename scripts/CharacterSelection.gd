@@ -11,23 +11,37 @@ func instatiateCharacters(character : PackedScene):
 	%LeftSpawner.add_child(player)
 	%LeftCharacter.find_child("Name").text = player.name
 	var random = randi() % 4
+	#ATTENZIONE! Quella che stai per vedere è una cosa brutta che potrebbe provocarti insonnia :'D
 	match random:
 		0:
-			enemy = luke.instantiate()
+			if player.name == "Luke":
+				enemy = daniel.instantiate()
+			else:
+				enemy = luke.instantiate()
 			enemy.find_child("Character").flip_h = true
 			%RightSpawner.add_child(enemy)
 			%RightCharacter.find_child("Name").text = enemy.name
 		1:
-			enemy = daniel.instantiate()
+			if player.name == "Daniel":
+				enemy = maury.instantiate()
+			else:
+				enemy = daniel.instantiate()
 			enemy.find_child("Character").flip_h = true
 			%RightSpawner.add_child(enemy)
 			%RightCharacter.find_child("Name").text = enemy.name
 		2:
-			enemy = maury.instantiate()
+			if player.name == "Maury":
+				enemy = mike.instantiate()
+			else:
+				enemy = maury.instantiate()
 			enemy.find_child("Character").flip_h = true
 			%RightSpawner.add_child(enemy)
 			%RightCharacter.find_child("Name").text = enemy.name
 		3:
+			if player.name == "Mike":
+				enemy = luke.instantiate()
+			else:
+				enemy = mike.instantiate()
 			enemy = mike.instantiate()
 			enemy.find_child("Character").flip_h = true
 			%RightSpawner.add_child(enemy)

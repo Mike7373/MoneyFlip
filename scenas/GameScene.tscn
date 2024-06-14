@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dftt7ps5rpfas"]
+[gd_scene load_steps=22 format=3 uid="uid://dftt7ps5rpfas"]
 
 [ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_6g6iv"]
 [ext_resource type="Texture2D" uid="uid://cbhs26502utob" path="res://assets/backgrounds/Game/game_background.jpg" id="2_7omyq"]
@@ -12,6 +12,7 @@
 [ext_resource type="SpriteFrames" uid="uid://dd3dc8geapmr" path="res://assets/animations/Maury.tres" id="10_xds1u"]
 [ext_resource type="SpriteFrames" uid="uid://dsoweioj178r2" path="res://assets/animations/Mike.tres" id="11_a5it6"]
 [ext_resource type="Texture2D" uid="uid://u5b1ln3nv6co" path="res://assets/ui/HP_Bar/red.png" id="14_ecbhy"]
+[ext_resource type="AudioStream" uid="uid://b6ub6hlbrga7v" path="res://assets/sfx/Three Red Hearts - Box Jump.ogg" id="14_nnyqc"]
 [ext_resource type="Texture2D" uid="uid://v0t4114qf1wh" path="res://assets/ui/HP_Bar/green.png" id="15_713f7"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_s4vmo"]
@@ -627,7 +628,13 @@ label_settings = SubResource("LabelSettings_88epi")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("14_nnyqc")
+autoplay = true
+
 [connection signal="button_down" from="UI/CharacterCanvas/Background/Luke" to="UI/CharacterCanvas" method="_on_luke_button_down"]
 [connection signal="button_down" from="UI/CharacterCanvas/Background/Daniel" to="UI/CharacterCanvas" method="_on_daniel_button_down"]
 [connection signal="button_down" from="UI/CharacterCanvas/Background/Mauro" to="UI/CharacterCanvas" method="_on_mauro_button_down"]
 [connection signal="button_down" from="UI/CharacterCanvas/Background/Mike" to="UI/CharacterCanvas" method="_on_mike_button_down"]
+[connection signal="finished" from="AudioStreamPlayer2D" to="GameManager" method="_on_audio_stream_player_2d_finished"]
