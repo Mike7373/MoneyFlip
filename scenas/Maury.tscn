@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://b8jec8gixu457"]
+[gd_scene load_steps=3 format=3 uid="uid://b6j0gvu7y021t"]
 
-[ext_resource type="SpriteFrames" uid="uid://cyj6row4wk8j7" path="res://assets/animations/Luke.tres" id="1_qngxh"]
+[ext_resource type="SpriteFrames" uid="uid://cyj6row4wk8j7" path="res://assets/animations/Luke.tres" id="1_p11uq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bgbvd"]
 
@@ -10,8 +10,8 @@
 shape = SubResource("RectangleShape2D_bgbvd")
 
 [node name="Character" type="AnimatedSprite2D" parent="."]
-sprite_frames = ExtResource("1_qngxh")
-animation = &"Heal"
+sprite_frames = ExtResource("1_p11uq")
+animation = &"Attack"
 autoplay = "Idle"
-frame = 18
+frame = 13
 frame_progress = 1.0

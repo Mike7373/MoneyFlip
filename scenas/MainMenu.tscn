@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://3yfrdhnfvo7y"]
 
 [ext_resource type="Script" path="res://scripts/MainMenu.gd" id="1_o3131"]
-[ext_resource type="Texture2D" path="res://assets/backgrounds/main_menu.png" id="1_sf8e0"]
+[ext_resource type="Texture2D" uid="uid://dweuxa8haeudo" path="res://assets/backgrounds/UI/main_menu.png" id="2_1pl2m"]
 [ext_resource type="FontFile" uid="uid://oohk85j86o1w" path="res://assets/fonts/mago1.ttf" id="2_5m5jk"]
 [ext_resource type="FontFile" uid="uid://5pppyphfcdit" path="res://assets/fonts/mago3.ttf" id="2_56cr1"]
 
@@ -34,7 +34,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_sf8e0")
+texture = ExtResource("2_1pl2m")
 expand_mode = 1
 flip_h = true
 
