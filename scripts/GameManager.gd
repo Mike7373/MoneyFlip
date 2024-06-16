@@ -19,6 +19,7 @@ func update_enemy_stats_canvas():
 	%RightCharacter.find_child("ProgressBar").value = enemy.character_stats.health
 
 func PlayRound():
+	%RoundSound.play()
 	print("PLayerTurn: " + str(isPlayerTurn))
 	#qui ci vanno i sfx
 	%RoundCanvas.show()
@@ -52,6 +53,8 @@ func EndGame():
 	#schermata di sconfitta
 	pass
 
+func _on_audio_stream_player_2d_finished():
+	%AudioStreamPlayer2D.play()
 func _on_attack_button_down():
 	player.select_type_of_bag(player.type_of_bag.attack)
 	_after_action_selection()
