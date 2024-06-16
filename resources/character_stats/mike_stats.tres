@@ -1,7 +1,7 @@
 [gd_resource type="Resource" load_steps=4 format=3 uid="uid://ieims68ee1mg"]
 
-[ext_resource type="Resource" uid="uid://cffje5hd5epe6" path="res://resources/large_bag.tres" id="1_d7t1l"]
-[ext_resource type="Resource" uid="uid://bnrq3pejnmoru" path="res://resources/small_bag.tres" id="2_1g4dw"]
+[ext_resource type="Resource" uid="uid://f666cslxewbw" path="res://resources/character_bags/mike_large_bag.tres" id="1_u0f8t"]
+[ext_resource type="Resource" uid="uid://b1wmk4knyxb2f" path="res://resources/character_bags/mike_small_bag.tres" id="2_ta0dw"]
 
 [sub_resource type="GDScript" id="GDScript_8ifni"]
 script/source = "extends Resource
@@ -24,9 +24,9 @@ func _init(p_health = 0, p_recovery = 0, p_damage = 0, p_luck = 0):
 [resource]
 resource_local_to_scene = true
 script = SubResource("GDScript_8ifni")
-health = 8000
+health = 50
 recovery = 20
-damage = 25
+damage = 40
 luck = 0.5
-small_bag = ExtResource("2_1g4dw")
-large_bag = ExtResource("1_d7t1l")
+small_bag = ExtResource("2_ta0dw")
+large_bag = ExtResource("1_u0f8t")

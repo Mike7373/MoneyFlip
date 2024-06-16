@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://b61tr2iybxpbn"]
+
+[ext_resource type="Texture2D" uid="uid://b7stlpmco5i0" path="res://assets/ui/coin/Coin_Silver-Sheet.png" id="1_e4eif"]
+
+[resource]
+atlas = ExtResource("1_e4eif")
+region = Rect2(0, 0, 32, 32)

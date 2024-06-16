@@ -1,7 +1,7 @@
 [gd_resource type="Resource" load_steps=4 format=3 uid="uid://do0pd3cvy7v8a"]
 
-[ext_resource type="Resource" uid="uid://cffje5hd5epe6" path="res://resources/large_bag.tres" id="1_ekblu"]
-[ext_resource type="Resource" uid="uid://bnrq3pejnmoru" path="res://resources/small_bag.tres" id="2_fjhs6"]
+[ext_resource type="Resource" uid="uid://vbkr1sop2k57" path="res://resources/character_bags/luke_large_bag.tres" id="1_f0op3"]
+[ext_resource type="Resource" uid="uid://fe4w1ec4w4hc" path="res://resources/character_bags/luke_small_bag.tres" id="2_lcc7c"]
 
 [sub_resource type="GDScript" id="GDScript_8ifni"]
 script/source = "extends Resource
@@ -28,5 +28,5 @@ health = 180
 recovery = 20
 damage = 25
 luck = 0.5
-small_bag = ExtResource("2_fjhs6")
-large_bag = ExtResource("1_ekblu")
+small_bag = ExtResource("2_lcc7c")
+large_bag = ExtResource("1_f0op3")

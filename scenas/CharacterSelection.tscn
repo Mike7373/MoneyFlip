@@ -1,7 +1,6 @@
-[gd_scene load_steps=51 format=3 uid="uid://ch521xy50333j"]
+[gd_scene load_steps=50 format=3 uid="uid://ch521xy50333j"]
 
 [ext_resource type="Script" path="res://scripts/CharacterSelection.gd" id="1_5sg2v"]
-[ext_resource type="Texture2D" path="res://assets/backgrounds/main_menu.png" id="2_yicgg"]
 [ext_resource type="FontFile" uid="uid://oohk85j86o1w" path="res://assets/fonts/mago1.ttf" id="3_o0dfm"]
 [ext_resource type="Texture2D" uid="uid://r0no1je0taet" path="res://assets/sprites/Elementals_Leaf_ranger_Free_v1.0/animations/spritesheets/Elementals_leaf_ranger_288x128_SpriteSheet.png" id="4_5r3tq"]
 [ext_resource type="Texture2D" uid="uid://dbgjwddd3414j" path="res://assets/sprites/Elementals_fire_knight_FREE_v1.1/spritesheets/fire_FREE_SpriteSheet_288x128.png" id="5_wbsec"]
@@ -315,7 +314,6 @@ z_index = -10
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("2_yicgg")
 expand_mode = 1
 flip_h = true
 

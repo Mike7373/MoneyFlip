@@ -48,9 +48,11 @@ func instatiateCharacters(character : PackedScene):
 	
 	%GameManager.player.on_recovery.connect(%GameManager.update_player_stats_canvas)
 	%GameManager.player.on_attack.connect(%GameManager.update_enemy_stats_canvas)
+	%GameManager.player.on_death.connect(%GameManager.show_game_over_canvas)
 	
 	%GameManager.enemy.on_recovery.connect(%GameManager.update_enemy_stats_canvas)
 	%GameManager.enemy.on_attack.connect(%GameManager.update_player_stats_canvas)
+	%GameManager.enemy.on_death.connect(%GameManager.show_game_over_canvas)
 
 func _on_luke_button_down():
 	#imposta character
