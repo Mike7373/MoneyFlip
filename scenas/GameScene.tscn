@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://dewqum56gspv1"]
+[gd_scene load_steps=43 format=3 uid="uid://dewqum56gspv1"]
 
 [ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_6g6iv"]
 [ext_resource type="Texture2D" uid="uid://cbhs26502utob" path="res://assets/backgrounds/Game/game_background.jpg" id="2_7omyq"]
@@ -19,7 +19,8 @@
 [ext_resource type="Texture2D" uid="uid://b61tr2iybxpbn" path="res://assets/ui/coin/coin_tail.tres" id="17_ry4pe"]
 [ext_resource type="Texture2D" uid="uid://b7stlpmco5i0" path="res://assets/ui/coin/Coin_Silver-Sheet.png" id="18_k8mf6"]
 [ext_resource type="Texture2D" uid="uid://bggjcd580loi1" path="res://assets/ui/buttons/bag.tres" id="19_mgy75"]
-[ext_resource type="PackedScene" uid="uid://cg0fi6000o6os" path="res://scenas/coin.tscn" id="20_lpn07"]
+[ext_resource type="PackedScene" path="res://scenas/coin.tscn" id="20_lpn07"]
+[ext_resource type="AudioStream" uid="uid://b6ub6hlbrga7v" path="res://assets/sfx/Soundtracks/Three Red Hearts - Box Jump.ogg" id="21_sxmi3"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_x62y6"]
 font = ExtResource("4_0d2dl")
@@ -936,6 +937,7 @@ vertical_alignment = 1
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true
+stream = ExtResource("21_sxmi3")
 autoplay = true
 
 [connection signal="button_down" from="UI/CharacterCanvas/Background/Luke" to="UI/CharacterCanvas" method="_on_luke_button_down"]
