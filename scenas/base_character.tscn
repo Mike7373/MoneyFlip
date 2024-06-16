@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkw6jkh3yfm3k"]
+
+[ext_resource type="Script" path="res://scripts/character/character_behaviour.gd" id="1_b182f"]
+[ext_resource type="Resource" uid="uid://cd6yc3w0eghhq" path="res://resources/character_stats.tres" id="2_0akiu"]
+
+[node name="Base_Character" type="Node"]
+script = ExtResource("1_b182f")
+character_stats = ExtResource("2_0akiu")

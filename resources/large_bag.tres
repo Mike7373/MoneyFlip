@@ -4,15 +4,18 @@
 script/source = "extends Resource
 
 @export var coin : int
-@export var amount_of_bags : int
+@export var attack_bags : int
+@export var recover_bags : int
 
-func _init(p_coin = 0, p_amount_of_bags = 0):
+func _init(p_coin = 0, p_attack_bags = 0, p_recovre_bags = 0):
 	coin = p_coin
-	amount_of_bags = p_amount_of_bags
+	attack_bags = p_attack_bags
+	recover_bags = p_recovre_bags
 "
 
 [resource]
 resource_local_to_scene = true
 script = SubResource("GDScript_maeyg")
 coin = 5
-amount_of_bags = 0
+attack_bags = 3
+recover_bags = 2

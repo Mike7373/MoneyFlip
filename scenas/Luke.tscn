@@ -1,10 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://b8jec8gixu457"]
+[gd_scene load_steps=5 format=3 uid="uid://ds6j3fmrupwnn"]
 
+[ext_resource type="Script" path="res://scripts/character/luke_character.gd" id="1_mif1s"]
 [ext_resource type="SpriteFrames" uid="uid://cyj6row4wk8j7" path="res://assets/animations/Luke.tres" id="1_qngxh"]
+[ext_resource type="Resource" uid="uid://do0pd3cvy7v8a" path="res://resources/character_stats/luke_stats.tres" id="2_e0h05"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bgbvd"]
 
 [node name="Luke" type="CharacterBody2D"]
+script = ExtResource("1_mif1s")
+character_stats = ExtResource("2_e0h05")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_bgbvd")

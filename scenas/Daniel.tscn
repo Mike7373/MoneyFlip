@@ -1,10 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://bs2x04tgpxvmu"]
+[gd_scene load_steps=5 format=3 uid="uid://be03g4tv1t04c"]
 
 [ext_resource type="SpriteFrames" uid="uid://q2ip17s4qfdj" path="res://assets/animations/Daniel.tres" id="1_o5m3v"]
+[ext_resource type="Script" path="res://scripts/character/daniel_character.gd" id="1_v71s3"]
+[ext_resource type="Resource" uid="uid://crxujnawnuf6a" path="res://resources/character_stats/daniel_stats.tres" id="2_4ua4k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bgbvd"]
 
 [node name="Daniel" type="CharacterBody2D"]
+script = ExtResource("1_v71s3")
+character_stats = ExtResource("2_4ua4k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_bgbvd")

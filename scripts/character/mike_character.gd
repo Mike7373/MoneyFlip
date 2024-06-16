@@ -1,0 +1,1 @@
+extends character_behaviour

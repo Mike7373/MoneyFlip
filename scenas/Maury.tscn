@@ -1,10 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://b6j0gvu7y021t"]
+[gd_scene load_steps=5 format=3 uid="uid://bn8gqen5ati3x"]
 
 [ext_resource type="SpriteFrames" uid="uid://dd3dc8geapmr" path="res://assets/animations/Maury.tres" id="1_gwcrd"]
+[ext_resource type="Script" path="res://scripts/character/maury_character.gd" id="1_toftl"]
+[ext_resource type="Resource" uid="uid://35lssr1d7rdu" path="res://resources/character_stats/maury_stats.tres" id="2_sipf1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bgbvd"]
 
 [node name="Maury" type="CharacterBody2D"]
+script = ExtResource("1_toftl")
+character_stats = ExtResource("2_sipf1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_bgbvd")

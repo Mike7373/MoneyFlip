@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dftt7ps5rpfas"]
+[gd_scene load_steps=21 format=3 uid="uid://dewqum56gspv1"]
 
 [ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_6g6iv"]
 [ext_resource type="Texture2D" uid="uid://cbhs26502utob" path="res://assets/backgrounds/Game/game_background.jpg" id="2_7omyq"]
@@ -14,32 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://u5b1ln3nv6co" path="res://assets/ui/HP_Bar/red.png" id="14_ecbhy"]
 [ext_resource type="Texture2D" uid="uid://v0t4114qf1wh" path="res://assets/ui/HP_Bar/green.png" id="15_713f7"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_s4vmo"]
-font = ExtResource("4_grsdn")
-font_size = 70
-
-[sub_resource type="LabelSettings" id="LabelSettings_wf4k0"]
-font = ExtResource("4_grsdn")
-font_size = 70
-
-[sub_resource type="LabelSettings" id="LabelSettings_6n6ph"]
-font = ExtResource("4_0d2dl")
-font_size = 200
-outline_size = 10
-outline_color = Color(1, 0, 0, 1)
-shadow_size = 5
-shadow_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_jr5ir"]
-font = ExtResource("4_grsdn")
-font_size = 70
-
-[sub_resource type="LabelSettings" id="LabelSettings_2d8cr"]
-font = ExtResource("4_0d2dl")
-font_size = 200
-font_color = Color(0, 0, 0, 1)
-outline_size = 5
-
 [sub_resource type="LabelSettings" id="LabelSettings_x62y6"]
 font = ExtResource("4_0d2dl")
 font_size = 50
@@ -52,6 +26,32 @@ font_size = 70
 outline_size = 3
 outline_color = Color(0, 0, 0, 1)
 shadow_color = Color(1, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jr5ir"]
+font = ExtResource("4_grsdn")
+font_size = 70
+
+[sub_resource type="LabelSettings" id="LabelSettings_2d8cr"]
+font = ExtResource("4_0d2dl")
+font_size = 200
+font_color = Color(0, 0, 0, 1)
+outline_size = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_6n6ph"]
+font = ExtResource("4_0d2dl")
+font_size = 200
+outline_size = 10
+outline_color = Color(1, 0, 0, 1)
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_s4vmo"]
+font = ExtResource("4_grsdn")
+font_size = 70
+
+[sub_resource type="LabelSettings" id="LabelSettings_wf4k0"]
+font = ExtResource("4_grsdn")
+font_size = 70
 
 [node name="GameScene" type="Node2D"]
 
@@ -85,6 +85,316 @@ scale = Vector2(7, 7)
 
 [node name="UI" type="Node" parent="."]
 
+[node name="StatsCanvas" type="Control" parent="UI"]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="LeftCharacter" type="Node2D" parent="UI/StatsCanvas"]
+unique_name_in_owner = true
+position = Vector2(500, 150)
+scale = Vector2(1.2, 1.2)
+
+[node name="ProgressBar" type="TextureProgressBar" parent="UI/StatsCanvas/LeftCharacter"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -60.0
+offset_right = 300.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+value = 30.0
+nine_patch_stretch = true
+texture_under = ExtResource("14_ecbhy")
+texture_progress = ExtResource("15_713f7")
+
+[node name="Percentage" type="Label" parent="UI/StatsCanvas/LeftCharacter/ProgressBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "999%"
+label_settings = SubResource("LabelSettings_x62y6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Name" type="Label" parent="UI/StatsCanvas/LeftCharacter/ProgressBar"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -50.0
+offset_bottom = 20.0
+grow_horizontal = 2
+text = "Name"
+label_settings = SubResource("LabelSettings_88epi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RightCharacter" type="Node2D" parent="UI/StatsCanvas"]
+unique_name_in_owner = true
+position = Vector2(1420, 150)
+scale = Vector2(1.2, 1.2)
+
+[node name="ProgressBar" type="TextureProgressBar" parent="UI/StatsCanvas/RightCharacter"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -60.0
+offset_right = 300.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+value = 30.0
+nine_patch_stretch = true
+texture_under = ExtResource("14_ecbhy")
+texture_progress = ExtResource("15_713f7")
+
+[node name="Percentage" type="Label" parent="UI/StatsCanvas/RightCharacter/ProgressBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "999%"
+label_settings = SubResource("LabelSettings_x62y6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Name" type="Label" parent="UI/StatsCanvas/RightCharacter/ProgressBar"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -50.0
+offset_bottom = 20.0
+grow_horizontal = 2
+text = "Name"
+label_settings = SubResource("LabelSettings_88epi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CharacterCanvas" type="Control" parent="UI"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_ycry3")
+
+[node name="Background" type="TextureRect" parent="UI/CharacterCanvas"]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("7_x5ycg")
+expand_mode = 1
+flip_h = true
+
+[node name="Opacity" type="Panel" parent="UI/CharacterCanvas/Background"]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="Luke" type="Button" parent="UI/CharacterCanvas/Background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -825.0
+offset_top = -40.0
+offset_right = -525.0
+offset_bottom = 260.0
+grow_horizontal = 2
+grow_vertical = 2
+icon_alignment = 1
+expand_icon = true
+
+[node name="LukeTxt" type="Label" parent="UI/CharacterCanvas/Background/Luke"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -100.0
+offset_bottom = -20.0
+grow_horizontal = 2
+text = "Luke
+"
+label_settings = SubResource("LabelSettings_jr5ir")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LukeAnim" type="AnimatedSprite2D" parent="UI/CharacterCanvas/Background/Luke"]
+position = Vector2(148, 26)
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("8_onyil")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.429951
+
+[node name="Daniel" type="Button" parent="UI/CharacterCanvas/Background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -375.0
+offset_top = -40.0
+offset_right = -75.0
+offset_bottom = 260.0
+grow_horizontal = 2
+grow_vertical = 2
+icon_alignment = 1
+expand_icon = true
+
+[node name="DanielTxt" type="Label" parent="UI/CharacterCanvas/Background/Daniel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -100.0
+offset_bottom = -20.0
+grow_horizontal = 2
+text = "Daniel"
+label_settings = SubResource("LabelSettings_jr5ir")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DanielAnim" type="AnimatedSprite2D" parent="UI/CharacterCanvas/Background/Daniel"]
+position = Vector2(148, 26)
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("9_kd5fa")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="Mauro" type="Button" parent="UI/CharacterCanvas/Background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 75.0
+offset_top = -40.0
+offset_right = 375.0
+offset_bottom = 260.0
+grow_horizontal = 2
+grow_vertical = 2
+icon_alignment = 1
+expand_icon = true
+
+[node name="MauroTxt" type="Label" parent="UI/CharacterCanvas/Background/Mauro"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -100.0
+offset_bottom = -20.0
+grow_horizontal = 2
+text = "Maury
+"
+label_settings = SubResource("LabelSettings_jr5ir")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MauroAnim" type="AnimatedSprite2D" parent="UI/CharacterCanvas/Background/Mauro"]
+position = Vector2(148, 26)
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("10_xds1u")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="Mike" type="Button" parent="UI/CharacterCanvas/Background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 525.0
+offset_top = -40.0
+offset_right = 825.0
+offset_bottom = 260.0
+grow_horizontal = 2
+grow_vertical = 2
+icon_alignment = 1
+expand_icon = true
+
+[node name="MikeTxt" type="Label" parent="UI/CharacterCanvas/Background/Mike"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -100.0
+offset_bottom = -20.0
+grow_horizontal = 2
+text = "Mike
+"
+label_settings = SubResource("LabelSettings_jr5ir")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MikeAnim" type="AnimatedSprite2D" parent="UI/CharacterCanvas/Background/Mike"]
+position = Vector2(148, 26)
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("11_a5it6")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="TitleTxt" type="Label" parent="UI/CharacterCanvas/Background"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250.0
+offset_top = 100.0
+offset_right = 250.0
+offset_bottom = 200.0
+grow_horizontal = 2
+text = "Select Character"
+label_settings = SubResource("LabelSettings_2d8cr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RoundCanvas" type="Control" parent="UI"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Background" type="Panel" parent="UI/RoundCanvas"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="RoundText" type="Label" parent="UI/RoundCanvas/Background"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = 200.0
+offset_right = 300.0
+offset_bottom = 360.0
+grow_horizontal = 2
+text = "ROUND 0"
+label_settings = SubResource("LabelSettings_6n6ph")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="GameplayCanvas" type="Control" parent="UI"]
 unique_name_in_owner = true
 visible = false
@@ -112,6 +422,8 @@ offset_right = -150.0
 offset_bottom = 260.0
 grow_horizontal = 2
 grow_vertical = 2
+text = "
+"
 icon = ExtResource("2_jucwv")
 icon_alignment = 1
 expand_icon = true
@@ -317,317 +629,14 @@ label_settings = SubResource("LabelSettings_wf4k0")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="RoundCanvas" type="Control" parent="UI"]
-unique_name_in_owner = true
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Background" type="Panel" parent="UI/RoundCanvas"]
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
-
-[node name="RoundText" type="Label" parent="UI/RoundCanvas/Background"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -300.0
-offset_top = 200.0
-offset_right = 300.0
-offset_bottom = 360.0
-grow_horizontal = 2
-text = "ROUND 0"
-label_settings = SubResource("LabelSettings_6n6ph")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CharacterCanvas" type="Control" parent="UI"]
-unique_name_in_owner = true
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("3_ycry3")
-
-[node name="Background" type="TextureRect" parent="UI/CharacterCanvas"]
-layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
-texture = ExtResource("7_x5ycg")
-expand_mode = 1
-flip_h = true
-
-[node name="Opacity" type="Panel" parent="UI/CharacterCanvas/Background"]
-layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
-
-[node name="Luke" type="Button" parent="UI/CharacterCanvas/Background"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -825.0
-offset_top = -40.0
-offset_right = -525.0
-offset_bottom = 260.0
-grow_horizontal = 2
-grow_vertical = 2
-icon_alignment = 1
-expand_icon = true
-
-[node name="LukeTxt" type="Label" parent="UI/CharacterCanvas/Background/Luke"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_top = -100.0
-offset_bottom = -20.0
-grow_horizontal = 2
-text = "Luke
-"
-label_settings = SubResource("LabelSettings_jr5ir")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="LukeAnim" type="AnimatedSprite2D" parent="UI/CharacterCanvas/Background/Luke"]
-position = Vector2(148, 26)
-scale = Vector2(3, 3)
-sprite_frames = ExtResource("8_onyil")
-animation = &"Idle"
-autoplay = "Idle"
-frame_progress = 0.429951
-
-[node name="Daniel" type="Button" parent="UI/CharacterCanvas/Background"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -375.0
-offset_top = -40.0
-offset_right = -75.0
-offset_bottom = 260.0
-grow_horizontal = 2
-grow_vertical = 2
-icon_alignment = 1
-expand_icon = true
-
-[node name="DanielTxt" type="Label" parent="UI/CharacterCanvas/Background/Daniel"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_top = -100.0
-offset_bottom = -20.0
-grow_horizontal = 2
-text = "Daniel"
-label_settings = SubResource("LabelSettings_jr5ir")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="DanielAnim" type="AnimatedSprite2D" parent="UI/CharacterCanvas/Background/Daniel"]
-position = Vector2(148, 26)
-scale = Vector2(3, 3)
-sprite_frames = ExtResource("9_kd5fa")
-animation = &"Idle"
-autoplay = "Idle"
-
-[node name="Mauro" type="Button" parent="UI/CharacterCanvas/Background"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 75.0
-offset_top = -40.0
-offset_right = 375.0
-offset_bottom = 260.0
-grow_horizontal = 2
-grow_vertical = 2
-icon_alignment = 1
-expand_icon = true
-
-[node name="MauroTxt" type="Label" parent="UI/CharacterCanvas/Background/Mauro"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_top = -100.0
-offset_bottom = -20.0
-grow_horizontal = 2
-text = "Maury
-"
-label_settings = SubResource("LabelSettings_jr5ir")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="MauroAnim" type="AnimatedSprite2D" parent="UI/CharacterCanvas/Background/Mauro"]
-position = Vector2(148, 26)
-scale = Vector2(3, 3)
-sprite_frames = ExtResource("10_xds1u")
-animation = &"Idle"
-autoplay = "Idle"
-
-[node name="Mike" type="Button" parent="UI/CharacterCanvas/Background"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 525.0
-offset_top = -40.0
-offset_right = 825.0
-offset_bottom = 260.0
-grow_horizontal = 2
-grow_vertical = 2
-icon_alignment = 1
-expand_icon = true
-
-[node name="MikeTxt" type="Label" parent="UI/CharacterCanvas/Background/Mike"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_top = -100.0
-offset_bottom = -20.0
-grow_horizontal = 2
-text = "Mike
-"
-label_settings = SubResource("LabelSettings_jr5ir")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="MikeAnim" type="AnimatedSprite2D" parent="UI/CharacterCanvas/Background/Mike"]
-position = Vector2(148, 26)
-scale = Vector2(3, 3)
-sprite_frames = ExtResource("11_a5it6")
-animation = &"Idle"
-autoplay = "Idle"
-
-[node name="TitleTxt" type="Label" parent="UI/CharacterCanvas/Background"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -250.0
-offset_top = 100.0
-offset_right = 250.0
-offset_bottom = 200.0
-grow_horizontal = 2
-text = "Select Character"
-label_settings = SubResource("LabelSettings_2d8cr")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="StatsCanvas" type="Control" parent="UI"]
-unique_name_in_owner = true
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
-
-[node name="LeftCharacter" type="Node2D" parent="UI/StatsCanvas"]
-unique_name_in_owner = true
-position = Vector2(500, 150)
-scale = Vector2(1.2, 1.2)
-
-[node name="ProgressBar" type="TextureProgressBar" parent="UI/StatsCanvas/LeftCharacter"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -300.0
-offset_top = -60.0
-offset_right = 300.0
-offset_bottom = 60.0
-grow_horizontal = 2
-grow_vertical = 2
-value = 30.0
-nine_patch_stretch = true
-texture_under = ExtResource("14_ecbhy")
-texture_progress = ExtResource("15_713f7")
-
-[node name="Percentage" type="Label" parent="UI/StatsCanvas/LeftCharacter/ProgressBar"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "999%"
-label_settings = SubResource("LabelSettings_x62y6")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Name" type="Label" parent="UI/StatsCanvas/LeftCharacter/ProgressBar"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_top = -50.0
-offset_bottom = 20.0
-grow_horizontal = 2
-text = "Name"
-label_settings = SubResource("LabelSettings_88epi")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="RightCharacter" type="Node2D" parent="UI/StatsCanvas"]
-unique_name_in_owner = true
-position = Vector2(1420, 150)
-scale = Vector2(1.2, 1.2)
-
-[node name="ProgressBar" type="TextureProgressBar" parent="UI/StatsCanvas/RightCharacter"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -300.0
-offset_top = -60.0
-offset_right = 300.0
-offset_bottom = 60.0
-grow_horizontal = 2
-grow_vertical = 2
-value = 30.0
-nine_patch_stretch = true
-texture_under = ExtResource("14_ecbhy")
-texture_progress = ExtResource("15_713f7")
-
-[node name="Percentage" type="Label" parent="UI/StatsCanvas/RightCharacter/ProgressBar"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "999%"
-label_settings = SubResource("LabelSettings_x62y6")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Name" type="Label" parent="UI/StatsCanvas/RightCharacter/ProgressBar"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_top = -50.0
-offset_bottom = 20.0
-grow_horizontal = 2
-text = "Name"
-label_settings = SubResource("LabelSettings_88epi")
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [connection signal="button_down" from="UI/CharacterCanvas/Background/Luke" to="UI/CharacterCanvas" method="_on_luke_button_down"]
 [connection signal="button_down" from="UI/CharacterCanvas/Background/Daniel" to="UI/CharacterCanvas" method="_on_daniel_button_down"]
 [connection signal="button_down" from="UI/CharacterCanvas/Background/Mauro" to="UI/CharacterCanvas" method="_on_mauro_button_down"]
 [connection signal="button_down" from="UI/CharacterCanvas/Background/Mike" to="UI/CharacterCanvas" method="_on_mike_button_down"]
+[connection signal="button_down" from="UI/GameplayCanvas/PurseTypeSelection/AttackImg" to="GameManager" method="_on_attack_button_down"]
+[connection signal="button_down" from="UI/GameplayCanvas/PurseTypeSelection/HealImg" to="GameManager" method="_on_heal_button_down"]
+[connection signal="button_down" from="UI/GameplayCanvas/PurseTypeSelection2/HeadImg" to="GameManager" method="_on_head_button_down"]
+[connection signal="button_down" from="UI/GameplayCanvas/PurseTypeSelection2/CrossImg" to="GameManager" method="_on_cross_button_down"]
+[connection signal="button_down" from="UI/GameplayCanvas/CoinFlipSelection/SingleCoin" to="GameManager" method="_on_single_coin_button_down"]
+[connection signal="button_down" from="UI/GameplayCanvas/CoinFlipSelection/SmallBag" to="GameManager" method="_on_small_bag_button_down"]
+[connection signal="button_down" from="UI/GameplayCanvas/CoinFlipSelection/BigBag" to="GameManager" method="_on_big_bag_button_down"]
