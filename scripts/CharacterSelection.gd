@@ -4,42 +4,44 @@ const luke = preload("res://scenas/Luke.tscn")
 const daniel = preload("res://scenas/Daniel.tscn")
 const maury = preload("res://scenas/Maury.tscn")
 const mike = preload("res://scenas/Mike.tscn")
+enum character_type {Luke, Daniel, Maury, Mike}
+var selected_char : character_type
 
 func instatiateCharacters(character : PackedScene):
 	var player = character.instantiate()
 	_init_main_character(player)
+	selected_char = character_type.get(player.name)
 	
 	var enemy
 	var random = randi() % 4
 	#ATTENZIONE! Quella che stai per vedere è una cosa brutta che potrebbe provocarti insonnia :'D
 	match random:
 		0:
-			if player.name == "Luke":
+			if selected_char == random:
 				enemy = daniel.instantiate()
 			else:
 				enemy = luke.instantiate()
 			enemy.find_child("Character").flip_h = true
 			_init_enemy_character(enemy)
 		1:
-			if player.name == "Daniel":
+			if selected_char == random:
 				enemy = maury.instantiate()
 			else:
 				enemy = daniel.instantiate()
 			enemy.find_child("Character").flip_h = true
 			_init_enemy_character(enemy)
 		2:
-			if player.name == "Maury":
+			if selected_char == random:
 				enemy = mike.instantiate()
 			else:
 				enemy = maury.instantiate()
 			enemy.find_child("Character").flip_h = true
 			_init_enemy_character(enemy)
 		3:
-			if player.name == "Mike":
+			if selected_char == random:
 				enemy = luke.instantiate()
 			else:
 				enemy = mike.instantiate()
-			enemy = mike.instantiate()
 			enemy.find_child("Character").flip_h = true
 			_init_enemy_character(enemy)
 	
