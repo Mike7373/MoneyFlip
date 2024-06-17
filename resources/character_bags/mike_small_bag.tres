@@ -17,5 +17,5 @@ func _init(p_coin = 0, p_attack_bags = 0, p_recovre_bags = 0):
 resource_local_to_scene = true
 script = SubResource("GDScript_maeyg")
 coin = 3
-attack_bags = 3
-recover_bags = 3
+attack_bags = 10
+recover_bags = 4

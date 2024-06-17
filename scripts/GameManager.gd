@@ -19,13 +19,16 @@ func show_game_over_canvas(p_name, p_wait_time):
 	$"../UI/GameOver/Background/GameOverText".text = p_name + " wins!"
 
 func PlayRound():
-	%RoundSound.play()
-	#qui ci vanno i sfx
-	%RoundCanvas.show()
-	%RoundText.text = "Round " + String.num(currentRound)
-	await get_tree().create_timer(3.0).timeout
-	%RoundCanvas.hide()
-	
+	if isLastPlayer:
+		isLastPlayer = false
+	else:
+		%RoundSound.play()
+		%RoundCanvas.show()
+		%RoundText.text = "Round " + String.num(currentRound)
+		await get_tree().create_timer(3.0).timeout
+		%RoundCanvas.hide()
+		isLastPlayer = true
+		currentRound += 1
 	if isPlayerTurn:
 		%GameplayCanvas.show()
 		$"../UI/GameplayCanvas/PurseTypeSelection".show()
@@ -33,16 +36,9 @@ func PlayRound():
 		_IA_turn()
 
 func EndRound():
-	if isLastPlayer:
-		isLastPlayer = false
-	else:
-		isLastPlayer = true
-	
 	if is_someone_dead:
 		EndGame()
 		return
-	
-	currentRound += 1
 	PlayRound()
 
 func PlayGame():
@@ -185,7 +181,10 @@ func head_or_tail(entity):
 	$"../UI/GameplayCanvas/HeadOrTailGame".hide()
 
 func _IA_turn():
-	enemy.select_type_of_bag(randi_range(0,1))
+	if enemy.character_stats.health < enemy.get_recovery_treshold():
+		enemy.select_type_of_bag(randi_range(0,1))
+	else:
+		enemy.select_type_of_bag(0)
 	enemy.select_coin_side(randi_range(0,1))
 	enemy.select_amount_of_coins(randi_range(0,2))
 	head_or_tail(enemy)

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" load_steps=2 format=3 uid="uid://dqcmvrbjuhkn8"]
 
-[sub_resource type="GDScript" id="GDScript_maeyg"]
+[sub_resource type="GDScript" id="GDScript_gwwv1"]
 script/source = "extends Resource
 
 @export var coin : int
@@ -15,7 +15,7 @@ func _init(p_coin = 0, p_attack_bags = 0, p_recovre_bags = 0):
 
 [resource]
 resource_local_to_scene = true
-script = SubResource("GDScript_maeyg")
+script = SubResource("GDScript_gwwv1")
 coin = 5
-attack_bags = 2
-recover_bags = 2
+attack_bags = 5
+recover_bags = 1

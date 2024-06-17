@@ -105,3 +105,6 @@ func calculate_time_to_wait(sprite_frames, anim_name) -> float:
 	var frame_count = sprite_frames.get_frame_count(anim_name)
 	var result = 1 / frame_speed * frame_count
 	return result
+
+func get_recovery_treshold() -> int:
+	return character_stats.recovery_threshold

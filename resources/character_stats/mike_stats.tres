@@ -10,6 +10,7 @@ script/source = "extends Resource
 @export var recovery : int
 @export var damage : int
 @export var luck : float
+@export var recovery_threshold : int
 
 @export var small_bag : Resource
 @export var large_bag : Resource
@@ -24,9 +25,10 @@ func _init(p_health = 0, p_recovery = 0, p_damage = 0, p_luck = 0):
 [resource]
 resource_local_to_scene = true
 script = SubResource("GDScript_8ifni")
-health = 100
-recovery = 10
-damage = 30
+health = 220
+recovery = 25
+damage = 70
 luck = 0.5
+recovery_threshold = 70
 small_bag = ExtResource("2_ta0dw")
 large_bag = ExtResource("1_u0f8t")
