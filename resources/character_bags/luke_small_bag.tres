@@ -18,4 +18,4 @@ resource_local_to_scene = true
 script = SubResource("GDScript_maeyg")
 coin = 3
 attack_bags = 3
-recover_bags = 3
+recover_bags = 4
