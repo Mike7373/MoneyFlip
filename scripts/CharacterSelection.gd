@@ -91,13 +91,13 @@ func _on_mike_button_down():
 func _init_main_character(player):
 	%LeftSpawner.add_child(player)
 	%LeftCharacter.find_child("Name").text = player.name
-	%LeftCharacter.find_child("Percentage").text = str(player.character_stats.health) + "%"
+	%LeftCharacter.find_child("Percentage").text = str(player.character_stats.health)
 	%LeftCharacter.find_child("ProgressBar").max_value = player.character_stats.health
 	%LeftCharacter.find_child("ProgressBar").value = player.character_stats.health
 
 func _init_enemy_character(enemy):
 	%RightSpawner.add_child(enemy)
 	%RightCharacter.find_child("Name").text = enemy.name
-	%RightCharacter.find_child("Percentage").text = str(enemy.character_stats.health) + "%"
+	%RightCharacter.find_child("Percentage").text = str(enemy.character_stats.health)
 	%RightCharacter.find_child("ProgressBar").max_value = enemy.character_stats.health
 	%RightCharacter.find_child("ProgressBar").value = enemy.character_stats.health

@@ -5,7 +5,7 @@
 [ext_resource type="Resource" uid="uid://35lssr1d7rdu" path="res://resources/character_stats/maury_stats.tres" id="2_sipf1"]
 [ext_resource type="AudioStream" uid="uid://bmltyrdqlc8k7" path="res://assets/sfx/12_Player_Movement_SFX/61_Hit_03.wav" id="4_n0af6"]
 [ext_resource type="AudioStream" uid="uid://cb7c6pqimlwhk" path="res://assets/sfx/8_Buffs_Heals_SFX/02_Heal_02.wav" id="5_h4o3w"]
-[ext_resource type="AudioStream" uid="uid://dxxqgu26uf1th" path="res://assets/sfx/8_Atk_Magic_SFX/30_Earth_02.wav" id="6_bdlru"]
+[ext_resource type="AudioStream" uid="uid://dxxqgu26uf1th" path="res://assets/sfx/Others/MauryAttack.wav" id="6_1ajgx"]
 [ext_resource type="AudioStream" uid="uid://bf6nmyqp446rg" path="res://assets/sfx/Others/Death.wav" id="7_w4yw2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bgbvd"]
@@ -35,7 +35,7 @@ pitch_scale = 1.25
 
 [node name="Attack_sfx" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
-stream = ExtResource("6_bdlru")
+stream = ExtResource("6_1ajgx")
 volume_db = 2.0
 pitch_scale = 1.2
 mix_target = 1

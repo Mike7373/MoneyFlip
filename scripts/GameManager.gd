@@ -99,11 +99,11 @@ func _after_amount_of_coin_selection():
 	EndRound()
 
 func update_player_stats_canvas():
-	%LeftCharacter.find_child("Percentage").text = str(player.character_stats.health) + "%"
+	%LeftCharacter.find_child("Percentage").text = str(player.character_stats.health)
 	%LeftCharacter.find_child("ProgressBar").value = player.character_stats.health
 
 func update_enemy_stats_canvas():
-	%RightCharacter.find_child("Percentage").text = str(enemy.character_stats.health) + "%"
+	%RightCharacter.find_child("Percentage").text = str(enemy.character_stats.health)
 	%RightCharacter.find_child("ProgressBar").value = enemy.character_stats.health
 
 func update_bag_usages():

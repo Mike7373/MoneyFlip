@@ -26,8 +26,8 @@ func _init(p_health = 0, p_recovery = 0, p_damage = 0, p_luck = 0):
 resource_local_to_scene = true
 script = SubResource("GDScript_8ifni")
 health = 400
-recovery = 40
-damage = 55
+recovery = 35
+damage = 47
 luck = 0.5
 recovery_threshold = 150
 small_bag = ExtResource("2_lcc7c")
