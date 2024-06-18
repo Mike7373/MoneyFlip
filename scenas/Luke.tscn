@@ -1,8 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://ds6j3fmrupwnn"]
+[gd_scene load_steps=9 format=3 uid="uid://ds6j3fmrupwnn"]
 
 [ext_resource type="Script" path="res://scripts/character/luke_character.gd" id="1_mif1s"]
 [ext_resource type="SpriteFrames" uid="uid://cyj6row4wk8j7" path="res://assets/animations/Luke.tres" id="1_qngxh"]
 [ext_resource type="Resource" uid="uid://do0pd3cvy7v8a" path="res://resources/character_stats/luke_stats.tres" id="2_e0h05"]
+[ext_resource type="AudioStream" uid="uid://bmltyrdqlc8k7" path="res://assets/sfx/12_Player_Movement_SFX/61_Hit_03.wav" id="4_c45y6"]
+[ext_resource type="AudioStream" uid="uid://cb7c6pqimlwhk" path="res://assets/sfx/8_Buffs_Heals_SFX/02_Heal_02.wav" id="5_f51ob"]
+[ext_resource type="AudioStream" uid="uid://rjs1ccmjroms" path="res://assets/sfx/Others/LukeAttack.wav" id="6_ebws5"]
+[ext_resource type="AudioStream" uid="uid://bf6nmyqp446rg" path="res://assets/sfx/Others/Death.wav" id="7_gkr3q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bgbvd"]
 
@@ -19,3 +23,27 @@ animation = &"Attack"
 autoplay = "Idle"
 frame = 13
 frame_progress = 1.0
+
+[node name="Hit_sfx" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("4_c45y6")
+volume_db = 14.0
+pitch_scale = 1.25
+
+[node name="Heal_sfx" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("5_f51ob")
+pitch_scale = 1.25
+
+[node name="Attack_sfx" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("6_ebws5")
+volume_db = -5.0
+pitch_scale = 0.6
+mix_target = 1
+max_polyphony = 3
+
+[node name="Die_sfx" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("7_gkr3q")
+volume_db = 15.0

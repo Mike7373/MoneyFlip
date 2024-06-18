@@ -12,6 +12,10 @@ var coin_side
 var coins_to_flip : int
 var multiplier : int
 var wait_time : float
+var hit_sound : AudioStreamPlayer
+var heal_sound : AudioStreamPlayer
+var attack_sound : AudioStreamPlayer
+var death_sound : AudioStreamPlayer
 
 signal on_attack
 signal on_recovery
@@ -23,6 +27,11 @@ signal on_death
 @onready var max_recover_small_bag = character_stats.small_bag.recover_bags
 @onready var max_recover_large_bag = character_stats.large_bag.recover_bags
 
+func _ready():
+	hit_sound = find_child("Hit_sfx")
+	heal_sound = find_child("Heal_sfx")
+	attack_sound = find_child("Attack_sfx")
+	death_sound = find_child("Die_sfx")
 func select_type_of_bag(p:type_of_bag):
 	bag_type = p
 
@@ -74,18 +83,21 @@ func do_action(player, enemy):
 func attack(player, enemy):
 	enemy.character_stats.health -= player.character_stats.damage * player.multiplier
 	
+	attack_sound.play()
 	player.play_attack_anim()
 	wait_time = calculate_time_to_wait(player.character.sprite_frames, "Attack")
 	await get_tree().create_timer(wait_time).timeout
 	
 	if enemy.character_stats.health <= 0:
+		enemy.character_stats.health = 0
 		wait_time = calculate_time_to_wait(player.character.sprite_frames, "Die")
 		enemy.emit_signal("on_death", name, wait_time)
 		player.on_attack.emit()
+		death_sound.play()
 		enemy.play_die_anim()
-		await get_tree().create_timer(wait_time).timeout
+		await get_tree().create_timer(wait_time+1).timeout
 		return
-	
+	hit_sound.play()
 	enemy.play_hurt_anim()
 	player.on_attack.emit()
 
@@ -95,6 +107,7 @@ func recover(player):
 	if character_stats.health >= maxHealth:
 		character_stats.health = maxHealth
 	
+	heal_sound.play()
 	player.play_heal_anim()
 	wait_time = calculate_time_to_wait(player.character.sprite_frames, "Heal")
 	await get_tree().create_timer(wait_time).timeout
